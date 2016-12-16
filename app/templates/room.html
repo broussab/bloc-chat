@@ -1,0 +1,8 @@
+<section ng-controller="RoomCtrl as rooms">
+    <h1 class="hero-title">{{rooms.heroTitle}}</h1>
+    <table >
+        <tr ng-repeat = "room in chatRooms" ng-mouseover="hovered = true" ng-mouseleave="hovered = false">
+            <td>{{room.name}}</td>
+        </tr>
+    </table>   
+</section>

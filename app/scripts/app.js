@@ -11,9 +11,9 @@
             url: '/',
             controller: 'LandingCtrl as landing',
             templateUrl: '/templates/landing.html'
-        })
+        });
     }
 angular
-    .module('blocChat', ['ui-router', 'firebase'])
+    .module('blocChat', ['ui.router', 'ui.bootstrap', 'firebase'])
     .config(config);
 })();
