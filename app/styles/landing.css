@@ -8,6 +8,8 @@ body {
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
+    border-bottom-color: goldenrod;
+    margin-bottom: 10px;
 }
 
 .hero-content .hero-title {
