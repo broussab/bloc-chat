@@ -1,8 +1,7 @@
 (function() {
      function RoomCtrl(Room, $scope) {
         this.heroTitle = "Available Rooms";
-        this.roomData = Room;
-        $scope.chatRooms=this.roomData.all; 
+        $scope.chatRooms=Room.all;
      }
  
      angular
