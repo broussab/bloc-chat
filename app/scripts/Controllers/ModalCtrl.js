@@ -1,28 +1,16 @@
 (function() {
-    function ModalCtrl($uibModal) {
-        this.name="";
-      this.openModal = function(){
-      var modal = $uibModal.open({
-        templateUrl: '/templates/modal.html',
-        controller: function($scope, $uibModalInstance){
-          $scope.cancel = function(){
+    function ModalCtrl($uibModalInstance) {
+        this.name="";        
+        this.cancel = function(){
             $uibModalInstance.dismiss('cancel');
-          };
-          $scope.submit = function(){
-            $uibModalInstance.close($scope.name);
-          };
-        }
-      });
-      modal.result.then(function (name){
-          console.log(name);
-          var fb =   firebase.database().ref().child("rooms");
-          fb.push({"name": name});
-      });
+        };
+        this.submit = function(){
+            $uibModalInstance.close(this.name);
+        };
     }
-  }
 
       
     angular
          .module('blocChat')
-         .controller('ModalCtrl', ['$uibModal', ModalCtrl]);
+         .controller('ModalCtrl', ['$uibModalInstance', ModalCtrl]);
  })();
