@@ -1,4 +1,11 @@
 <div class="hero-content img-rounded container-fluid">
     <h1 class="hero-title">{{landing.heroTitle}}</h1>
 </div>
-<body class="container-fluid"></body>
+<div class="container-fluid">
+    <div>
+        <ng-include src="'/templates/room.html'" class="rooms"></ng-include>
+    </div>
+    <div>
+        <ng-include src="'/templates/message.html'" class="messages"></ng-include>
+    </div>
+</div>

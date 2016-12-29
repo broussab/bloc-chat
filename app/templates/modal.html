@@ -1,15 +1,14 @@
-<div class="container-fluid">
+<div class="modal-header">
     <h3 class="text-center">Create A New Room</h3>
-    <form ng-submit="submit()">
-    <div class="form-group">
-        <label class = "col-md-4 control-label text-right" for="createARoom">Enter A New Room</label>
-        <div class="col-sm-4">
-            <input type="text" ng-model="modal.name" class="form-control" id="createARoom" placeholder="Room Name"/>
-        </div> 
+</div>
+    <form ng-submit="submit()" name="roomForm">
+    <div class="modal-body">
+        <label class = "control-label" for="createARoom">Enter A New Room</label>
+        <input type="text" name="myInput" ng-model="modal.name" class="form-control" id="createARoom"  placeholder="Room Name" ng-required="true"/>
+        <span ng-show="roomForm.myInput.$invalid">*Room name is required</span>
     </div>
-    <div class="form-group">
+    <div class="modal-footer">
         <button class="btn btn-primary" type="button" ng-click="modal.submit()">Submit</button>
         <button class="btn btn-warning" type="button" ng-click="modal.cancel()">Cancel</button>
     </div>
     </form>
-</div>
