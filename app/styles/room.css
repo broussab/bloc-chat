@@ -1,0 +1,11 @@
+a, button, .pointer {
+       cursor: pointer;
+}
+
+.links {
+    color: white;
+}
+
+a.active {
+    border: 2px solid green;
+}
