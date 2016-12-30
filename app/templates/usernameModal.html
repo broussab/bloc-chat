@@ -1,0 +1,13 @@
+<div class="modal-header">
+    <h3 class="text-center">Create A Name</h3>
+</div>
+    <form ng-submit="submit()" name="usernameForm">
+    <div class="modal-body">
+        <label class = "control-label" for="createAUsername">Username will appear when you send messages</label>
+        <input type="text" name="myInput" ng-model="uName" class="form-control" id="createAUsername"  placeholder="Username" ng-required="true"/>
+        <span ng-show="usernameForm.myInput.$invalid">*Username is required</span>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-primary" type="button" ng-click="username.submit()" ng-show="usernameForm.myInput.$valid">Submit</button>
+    </div>
+    </form>

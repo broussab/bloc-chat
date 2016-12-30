@@ -14,6 +14,6 @@
         });
     }
 angular
-    .module('blocChat', ['ui.router', 'ui.bootstrap', 'firebase'])
+    .module('blocChat', ['ngCookies','ui.router', 'ui.bootstrap', 'firebase'])
     .config(config);
 })();
