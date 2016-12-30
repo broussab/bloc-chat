@@ -1,9 +1,16 @@
 <div class="jumbotron messageBG">
-    <h2 class="hero-title">Messages</h2>
-    <h3>{{currentRoom.name}}</h3>
-    <div class="text-left" ng-repeat="message in messages">
-        <strong>{{message.userName}}</strong>
-        <div>Sent At {{message.sentAt}}</div>
-        <div>{{message.msBody}}</div>
+    <div>
+        <h2 class="hero-title">Messages</h2>
+        <h3 class="red-text">{{currentRoom.name}}</h3>
     </div>
+    <div class="text-left" ng-repeat="message in messages">
+        <strong class="black-text">{{message.userName}}</strong>
+        <div class="black-text">Sent: {{message.sentAt}}</div>
+        <div>{{message.msBody}}</div>
+        <div class="red-text">-----</div>
+    </div>
+    <form ng-show="currentRoom">
+        <input type="text" name="myInput" ng-model="landing.content" class="form-control" id="createAMessage"  placeholder="Message Name" ng-required="true"/>
+        <button class="btn btn-warning" type="button" ng-click="landing.send()">Create Message</button>
+    </form>
 </div>
