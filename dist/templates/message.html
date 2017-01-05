@@ -11,6 +11,6 @@
     </div>
     <form ng-show="currentRoom">
         <input type="text" name="myInput" ng-model="landing.content" class="form-control" id="createAMessage"  placeholder="Message Name" ng-required="true"/>
-        <button class="btn btn-warning" type="button" ng-click="landing.send()">Create Message</button>
+        <input class="btn btn-warning" type="submit" ng-click="landing.send()" value="Create Message"/>
     </form>
 </div>
