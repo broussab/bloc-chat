@@ -1,0 +1,9 @@
+<section ng-controller="RoomCtrl as rooms">
+    <h2 class="hero-title">{{rooms.heroTitle}}</h2>
+    <ul class="list-unstyled">
+        <li class="text-left" ng-repeat="room in chatRooms" ng-mouseover="hovered = true" ng-mouseleave="hovered = false">
+            <a class="links" ng-click="landing.selectRoom(room)" ng-class="{active: currentRoom.$id===room.$id}">{{room.name}}</a>
+        </li>
+    </ul> 
+    <button class="btn btn-default" type="submit" ng-click="rooms.openModal()">Create Room</button>
+</section>
