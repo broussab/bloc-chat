@@ -4,3 +4,5 @@ bower_components/
 .sass-cache/
 .DS_Store
 dist/
+npm-debug.log
+/*.env
